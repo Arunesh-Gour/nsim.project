@@ -1,0 +1,86 @@
+<div
+   class="overflow-auto d-flex flex-wrap
+      justify-content-center align-items-center"
+>
+   <form
+      class="needs-validation portal-login-form"
+      action=""
+      method=""
+      onsubmit="return false;"
+      autocomplete="on"
+      novalidate
+   >
+      <hr />
+      <div
+         class="form-floating mb-3"
+      >
+         <input
+            class="form-control portal-login-inputfield username-inputfield"
+            type="text"
+            id="portal-login-username-inputfield"
+            name="username"
+            placeholder="Username"
+            aria-describedby="portal-login-username-helper-label"
+            required
+         />
+         <label
+            for="portal-login-username-inputfield"
+         >
+            Username
+         </label>
+         <div
+            class="form-text"
+            id="portal-login-username-helper-label"
+         >
+            Ex: sharma.ji, sharma21, etc.
+         </div>
+         <div
+            class="invalid-feedback"
+         >
+            Invalid username!
+         </div>
+      </div>
+      <div
+         class="form-floating mb-3"
+      >
+         <input
+            class="form-control portal-login-inputfield password-inputfield"
+            type="password"
+            id="portal-login-password-inputfield"
+            name="password"
+            placeholder="Password"
+            aria-describedby="portal-login-password-helper-label"
+            required
+         />
+         <label
+            for="portal-login-password-inputfield"
+         >
+            Password
+         </label>
+         <div
+            class="form-text"
+            id="portal-login-password-helper-label"
+         >
+            Password should be 8-63 characters long.
+         </div>
+         <div
+            class="invalid-feedback"
+         >
+            Invalid password!
+         </div>
+      </div>
+      <div
+         class="d-grid gap-1 mx-auto"
+      >
+         <button
+            class="btn btn-outline-danger disabled
+               portal-login-login-button"
+            type="button"
+            disabled="true"
+         >
+            L O G I N
+         </button>
+      </div>
+      <hr />
+   </form>
+</div>

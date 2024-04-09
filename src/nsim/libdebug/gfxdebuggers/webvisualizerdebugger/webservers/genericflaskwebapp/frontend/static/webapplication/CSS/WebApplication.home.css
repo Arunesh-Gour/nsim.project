@@ -1,0 +1,561 @@
+* {
+   user-select: none;
+}
+
+*::selection {
+   background-color: rgba(80, 60, 180, 0.4);
+   color: rgb(240, 20, 20);
+}
+
+a {
+   text-decoration: none;
+}
+
+a:link, a:visited {
+   color: rgba(250, 200, 200, 1);
+}
+
+a:hover {
+   color: rgba(250, 200, 50, 1);
+}
+
+a:active {
+   color: rgba(250, 100, 50, 1);
+}
+
+body {
+   background-color: rgba(0, 0, 0, 1);
+   color : white;
+}
+
+.selectable-all {
+   text-decoration: none;
+   color: inherit;
+   user-select: all;
+}
+
+.selectable-all:hover {
+   color: inherit;
+}
+
+.selectable-all:active{
+   color: inherit;
+}
+
+#main-div {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   bottom: 0px;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   background-color: rgba(0, 0, 0, 0);
+   /*background-image: url("/Images/A.png"),
+      url("/Images/Light.png");*/
+   background-clip: padding-box;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+
+.navbar-strip {
+   background-color: rgba(40, 40, 40, 0.2);
+}
+
+.navbar-strip-item {
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-tab-slide {
+   background-color: rgba(20, 20, 20, 0.2);
+   backdrop-filter: blur(6px);
+}
+
+.navbar-offcanvas-toggler {
+}
+
+.navbar-offcanvas-toggler-button {
+   border: none;
+   height: 1em;
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-offcanvas-toggler-button:hover {
+   border: none;
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-offcanvas-toggler-button:active {
+   border: none;
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-tab-field {
+   background-color: rgba(40, 40, 40, 0.4);
+   border: 2px groove rgba(140, 140, 140, 0.4);
+   border-radius: 4px;
+   color: rgb(250, 0, 0);
+   backdrop-filter: blur(2px);
+}
+
+.navbar-tab-separator {
+   background-color: rgba(20, 20, 20, 0.2);
+   color: rgb(255, 255, 255);
+}
+
+.navbar-center-image {
+   height: 2em;
+   --bs-aspect-ratio: 50%;
+}
+
+.navbar-login-button {
+}
+
+.navbar-login-button.activator-active {
+   display: None;
+}
+
+.navbar-data-label {
+   background-color: rgba(0, 0, 0, 0);
+   color: rgb(200, 200, 200);
+}
+
+.navbar-data-field {
+   background-color: rgba(40, 40, 40, 0.4);
+   border: 2px groove rgba(140, 140, 140, 0.4);
+   border-radius: 4px;
+   color: rgb(250, 0, 0);
+   backdrop-filter: blur(8px);
+}
+
+.navbar-data-separator {
+   background-color: rgba(0, 0, 0, 0);
+   color: rgb(255, 255, 255);
+}
+
+.navbar-offcanvas-strip {
+   background-color: rgba(40, 40, 40, 0.4);
+   border: 2px groove rgba(140, 140, 140, 0.4);
+   border-radius: 4px;
+   backdrop-filter: blur(8px);
+}
+
+.navbar-offcanvas-title {
+}
+
+.navbar-offcanvas-body {
+}
+
+.navbar-offcanvas-accordion {
+}
+
+.navbar-offcanvas-accordion-item {
+   background-color: rgba(0, 0, 0, 0);
+   border-color: rgba(200, 200, 200, 0.6);
+}
+
+.navbar-offcanvas-accordion-button,
+.navbar-offcanvas-accordion-button:not(.collapsed) {
+   background-color: rgba(0, 0, 0, 0);
+   color: rgb(255, 255, 255);
+}
+
+.navbar-offcanvas-accordion-button:not(.no-subtab)::after {
+   color: rgb(250, 250, 250);
+   background-color: rgba(255, 255, 255, 0.7);
+   border-radius: 8px;
+}
+
+.navbar-offcanvas-accordion-button.no-subtab::after {
+   background-color: rgba(0, 0, 0, 0);
+   background-image: none;
+}
+
+.navbar-offcanvas-accordion-button.activator-active {
+   background-color: rgba(240, 100, 0, 0.6);
+}
+
+.navbar-offcanvas-accordion-body {
+}
+
+.navbar-offcanvas-list-group-item {
+   background-color: rgba(0, 0, 0, 0);
+   color: rgb(255, 255, 255);
+   border-color: rgba(200, 200, 200, 0.6);
+}
+
+.navbar-offcanvas-list-group-item.activator-active {
+   background-color: rgba(240, 100, 0, 0.6);
+}
+
+.topbar-strip {
+   background-color: rgba(40, 40, 40, 0.2);
+}
+
+.topbar-strip-item {
+   background-color: rgba(0, 0, 0, 0);
+   border-bottom: 2px solid rgba(0, 0, 0, 0);
+   color: rgb(200, 200, 200);
+   cursor: pointer;
+}
+
+.topbar-strip-item:hover {
+   border-bottom: 2px solid rgba(240, 100, 0, 0.8);
+   color: rgb(220, 220, 220);
+}
+
+.topbar-strip-item.activator-active {
+   background-color: rgba(80, 80, 80, 0.2);
+   border-bottom: 2px solid rgba(250, 0, 0, 0.8);
+   color: rgb(220, 220, 220);
+}
+
+.topbar-strip-item.activator-active:hover {
+   color: rgb(240, 240, 240);
+}
+
+.topbar-dropdown-menu {
+   border: 2px groove rgba(200, 20, 20, 0.4);
+   border-radius: 4px;
+   background-color: rgba(20, 20, 20, 0.4);
+   backdrop-filter: blur(8px);
+}
+
+.topbar-dropdown-item {
+}
+
+.topbar-dropdown-item.activator-active {
+   background-color: rgba(240, 100, 0, 0.6);
+   color: rgb(220, 220, 220);
+}
+
+.topbar-dropdown-item.activator-active:hover {
+   color: rgb(240, 240, 240);
+}
+
+.controlbar-select-btn {
+   filter: invert(100%);
+}
+
+.controlbar-select-item {
+   background-color: rgba(20, 20, 20, 1);
+   color: rgb(250, 250, 250);
+}
+
+.content-strip {
+   background-color: rgba(0, 0, 0, 0);
+   height: -webkit-fill-available;
+}
+
+.content-strip-container {
+   background-color: rgba(20, 20, 20, 0.2);
+   height: 1px;
+}
+
+.sidebar-block {
+   width: 4%;
+   background-color: rgba(60, 60, 60, 0.4);
+}
+
+.sidebar-item {
+   background-color: rgba(0, 0, 0, 0);
+   color: rgb(255, 255, 255);
+   border-color: rgba(200, 200, 200, 0.6);
+   padding: 0px;
+}
+
+.sidebar-item-container {
+   padding: 30% 0px;
+}
+
+.sidebar-internal-item-button {
+   width: 100%;
+   cursor: pointer;
+}
+
+/*
+.sidebar-internal-item-button.no-subtab {
+   cursor: pointer;
+}
+*/
+
+.sidebar-internal-item-holder {
+   position: fixed;
+   z-index: 20;
+}
+
+.sidebar-dropdown-menu {
+   border: 2px groove rgba(200, 20, 20, 0.4);
+   border-radius: 4px;
+   background-color: rgba(20, 20, 20, 0.4);
+   backdrop-filter: blur(8px);
+}
+
+.sidebar-internal-item .sidebar-dropdown-menu {
+   display: none;
+}
+
+.sidebar-internal-item:hover .sidebar-dropdown-menu {
+   display: block;
+}
+
+.sidebar-item-image {
+   background-color: rgba(250, 250, 250, 0.4);
+}
+
+.sidebar-internal-item .sidebar-item-image {
+   border-right: 2px solid rgba(0, 0, 0, 0);
+}
+
+.sidebar-internal-item:hover .sidebar-item-image {
+   border-right: 2px solid rgba(240, 100, 0, 0.8);
+}
+
+.sidebar-internal-item.activator-active .sidebar-item-image {
+   border-right: 2px solid rgba(250, 0, 0, 0.8);
+}
+
+.sidebar-internal-item.activator-active:hover .sidebar-item-image {
+   border-right: 2px solid rgba(250, 20, 20, 0.8);
+}
+
+.sidebar-internal-item.activator-active .sidebar-dropdown-tab-info {
+   background-color: rgba(250, 0, 0, 0.6);
+}
+
+.sidebar-dropdown-item {
+}
+
+.sidebar-dropdown-item.activator-active {
+   background-color: rgba(240, 100, 0, 0.6);
+   color: rgb(220, 220, 220);
+}
+
+.sidebar-dropdown-item.activator-active:hover {
+   color: rgb(240, 240, 240);
+}
+
+.sidebar-dropdown-menu .sidebar-dropdown-tab-info {
+   color: rgb(240, 240, 240);
+}
+
+.content-strip-col-seperator {
+   width: 1px;
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.content-block {
+   background-color: rgba(60, 60, 60, 0.4);
+   backdrop-filter: blur(8px);
+}
+
+.contentblock-splitstrip-item {
+   height: 50%;
+}
+
+.contentblock-splitstrip-item-container {
+   background-color: rgba(0, 0, 0, 0);
+   height: 1px;
+}
+
+.contentblock-splitstrip-content-block {
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.information-modal-content {
+   background-color: rgba(40, 40, 40, 0.4);
+   border-color: rgba(200, 200, 200, 0.8);
+   backdrop-filter: blur(8px);
+}
+
+.information-list {
+   background-color: rgba(0, 0, 0, 0);
+}
+
+.information-list-item {
+   background-color: rgba(40, 40, 40, 0.4);
+   border: 2px groove rgba(140, 140, 140, 0.4);
+   border-radius: 4px;
+   color: rgb(200, 200, 200);
+   cursor: pointer;
+}
+
+.information-list-item:hover, .information-list-item:focus {
+   background-color: rgba(80, 80, 80, 0.4);
+   border-color: rgba(180, 180, 180, 0.4);
+   color: rgb(240, 240, 240);
+}
+
+.information-list-item:active {
+   background-color: rgba(60, 60, 60, 0.4);
+}
+
+.content-card-strip {
+}
+
+.content-card-item {
+   background-color: rgba(0, 0, 0, 0);
+   color: rgba(250, 250, 250, 1);
+}
+
+.content-card-item.debug-default-index {
+   border-color: rgba(250, 50, 50, 0.4)!important;
+}
+
+.content-card-item:hover, .content-card-item:focus {
+   background-color: rgba(160, 160, 160, 0.2);
+   color: rgba(240, 240, 240, 1);
+}
+
+.content-card-item:active {
+   background-color: rgba(120, 120, 120, 0.2);
+   color: rgba(250, 250, 250, 1);
+}
+
+.content-card-item-header {
+}
+
+.content-card-item-footer {
+}
+
+.content-card-item-body {
+}
+
+.content-card-item-header .debug-index {
+   color: rgba(240, 40, 40, 1);
+}
+
+.content-card-item-header .debug-index.debug-index-active {
+   color: rgba(40, 240, 40, 1);
+}
+
+.content-card-item-body .debug-layer {
+   background-color: rgba(220, 40, 40, 0.4);
+   border-radius: 6px;
+}
+
+.content-card-item-body .debug-queues-slab {
+}
+
+.content-card-item-body .debug-queue-row {
+   height: 40px;
+}
+
+.content-card-item-body .debug-queue-slot {
+   background-color: rgba(160, 160, 160, 0.2);
+   height: 46%;
+   width: 22%;
+   padding: 1%;
+   margin: 1%;
+   border-radius: 2px;
+}
+
+.content-card-item-body .debug-queue-slot.debug-queue-slot-active {
+   background-color: rgba(250, 60, 60, 0.6);
+   border-radius: 4px;
+}
+
+.content-card-item-footer .debug-mode {
+}
+
+.content-card-item-footer .debug-state {
+}
+
+.timetable-table {
+   background-color: rgba(20, 20, 20, 0.2);
+   border-color: rgba(80, 80, 180, 0.4);
+   color: rgb(240, 240, 240);
+   width: 1024px;
+}
+
+@media (min-width: 1024px) {
+   .timetable-table {
+      width: 100%;
+   }
+}
+
+.timetable-table caption{
+   background-color: rgba(20, 20, 20, 0.8);
+   color: rgb(240, 240, 240);
+   padding-left: 10px;
+   backdrop-filter: blur(2px);
+}
+
+.timetable-table thead tr, .timetable-table tbody th {
+   background-color: rgba(140, 0, 200, 0.8);
+   backdrop-filter: blur(2px);
+}
+
+.timetable-table .timetable-slot {
+   background-color: rgba(250, 200, 0, 0.8);
+   color: rgb(20, 20, 20);
+   backdrop-filter: blur(2px);
+}
+
+.timetable-table .timetable-slot.timetable-slot-occupied {
+   background-color: rgba(0, 240, 40, 0.8);
+}
+
+.timetable-table .timetable-slot:hover,
+.timetable-table .timetable-slot:active,
+.timetable-table .timetable-slot:focus {
+   background-color: rgba(250, 130, 0, 0.8);
+   color: rgb(240, 240, 240);
+}
+
+.timetable-table .timetable-slot.timetable-slot-occupied:hover,
+.timetable-table .timetable-slot.timetable-slot-occupied:active,
+.timetable-table .timetable-slot.timetable-slot-occupied:focus {
+   background-color: rgba(20, 180, 0, 0.8);
+   color: rgb(240, 240, 240);
+}
+
+.ffcs-course-list-item {
+}
+
+.ffcs-course-list-item.ffcs-course-mandation-mandatory {
+   border-left-color: rgba(250, 20, 20, 0.8);
+   border-right-color: rgba(250, 20, 20, 0.8);
+}
+
+.ffcs-course-list-item.ffcs-course-mandation-mandatory.ffcs-course-registered {
+   border-left-color: rgba(0, 250, 0, 0.8);
+   border-right-color: rgba(0, 250, 0, 0.8);
+}
+
+.ffcs-course-list-item.ffcs-course-mandation-optional {
+   border-left-color: rgba(250, 250, 0, 0.8);
+   border-right-color: rgba(250, 250, 0, 0.8);
+}
+
+.ffcs-course-list-item.ffcs-course-mandation-optional.ffcs-course-registered {
+   border-left-color: rgba(0, 150, 250, 0.8);
+   border-right-color: rgba(0, 150, 250, 0.8);
+}
+
+.ffcs-courseschedule-list-item {
+}
+
+.ffcs-courseschedule-list-item.ffcs-courseschedule-registered {
+   border-left-color: rgba(0, 250, 0, 0.8);
+   border-right-color: rgba(0, 250, 0, 0.8);
+}
+
+.portal-login-form {
+   color: rgb(240, 240, 240);
+}
+
+.portal-login-form .portal-login-inputfield {
+   background-color: rgba(0, 0, 0, 0)!important;
+   color: rgb(240, 240, 240)!important;
+}
+
+.graphic-img {
+   max-width: 99%;
+}
+
+.graphic-description {
+   color: inherit;
+}
